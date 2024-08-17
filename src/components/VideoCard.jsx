@@ -40,7 +40,10 @@ const VideoCard = ({ video}) => {
               )}
             </span>
             <div className="flex text-[12px] font-semibold text-white/[0.7] truncate overflow-hidden">
-              <span>{`${abbreviateNumber(video?.stats?.views)} views`}</span>
+            <span>
+  {typeof video?.stats?.views === 'number' && 
+    `${abbreviateNumber(video.stats.views)} views`}
+</span>
               <span className="flex text-2xl leading-none font-bold text-white/[0.7] relative top-[-10px] mx-1">
                 .
               </span>
