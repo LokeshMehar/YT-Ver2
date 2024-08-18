@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 
 import ChannelCard from "./ChannelCard";
-
+import { v4 as uuidv4 } from 'uuid';
 import { fetchDataFromApi } from "../utils/api";
 import { Context } from "../context/contextApi";
 import LeftNav from "./LeftNav";
@@ -36,7 +36,7 @@ const SearchResult = () => {
             if (item?.type === "video")
               {
                 let video = item.video;
-                return <SearchResultVideoCard key={video.videoId} video={video} />;
+                return <SearchResultVideoCard key={uuidv4()} video={video} />;
               }
             else if(item?.type === "channel")
               {

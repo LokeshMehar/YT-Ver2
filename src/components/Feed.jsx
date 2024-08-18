@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 import { Context } from "../context/contextApi";
 import LeftNav from "./LeftNav";
@@ -22,7 +23,7 @@ const Feed = () => {
               if (item?.type === "video")
               {
                 return (
-                  <VideoCard key={item?.video?.videoId} video={item?.video} />
+                  <VideoCard key={uuidv4()} video={item?.video} />
                 );
               }
               else if(item?.type === "channel")
