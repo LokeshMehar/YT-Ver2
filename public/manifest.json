@@ -1,17 +1,41 @@
 {
-  "short_name": "Youtube By LM",
-  "name": "YT ver-2",
+  "short_name": "YouTube By LM",
+  "name": "YouTube Version 2",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "orientation": "portrait", 
+  "description": "A progressive web app for watching YouTube videos with enhanced features.",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.google.android.youtube"
+    },
+    {
+      "platform": "itunes",
+      "id": "544007664"
+    }
+  ]
 }
-
-
